@@ -18,6 +18,20 @@
 
             document.addEventListener('click', startPlayback);
             });
+
+
+        setTimeout(() => {
+            const disk = document.getElementById("disk");
+            if (disk) {
+                let i = 0;
+                setInterval(() => {
+                    i += 1;
+                    if (i >= 360) i = 0;
+                    disk.style.transform = `rotate(${i}deg)`;
+                }, 20);
+            }
+        }, 100);
+
     </script>
 </head>
 <body>
@@ -28,6 +42,9 @@
         <a href="../series/series.html" class="nav-button">Сериалы</a>
         <a href="https://shattereddisk.github.io/rickroll/rickroll.mp4" class="nav-button">Контакты</a>
     </header>
+    <div class="disk">
+        <img id="disk" src="../materials/sm1.png">
+    </div>
     <div class="SC">
         
         <div class="content">
