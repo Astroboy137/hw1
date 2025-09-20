@@ -15,23 +15,27 @@
             const startPlayback = function() {
                 audio.play()
             };
-
-            document.addEventListener('click', startPlayback);
-            });
-
-
-        setTimeout(() => {
             const disk = document.getElementById("disk");
-            if (disk) {
-                let i = 0;
-                setInterval(() => {
-                    i += 1;
-                    if (i >= 360) i = 0;
-                    disk.style.transform = `rotate(${i}deg)`;
-                }, 20);
+            function rotate(){
+                setTimeout(()=>{
+                    if (disk) {
+                        let i = 0;
+                        setInterval(() => {
+                            i += 1;
+                            if (i >= 360) i = 0;
+                            disk.style.transform = `rotate(${i}deg)`;
+                        }, 20);
+                    }
+                },1000)
             }
-        }, 100);
-
+            if(disk){
+                disk.addEventListener('click', startPlayback);
+                disk.addEventListener('click', rotate);
+            }
+            
+        });
+        
+        
     </script>
 </head>
 <body>
