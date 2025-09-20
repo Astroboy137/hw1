@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="../googoogaga.css">
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+         const audio = document.getElementById('backgroundMusic');
+
+         const playPromise = audio.play();
+
+         const startPlayback = function() {
+             audio.play()
+         };
+
+         document.addEventListener('click', startPlayback);
+         });
+ </script>
 </head>
 <body>
     <div class="main">
-        <header class="header">
+     
 
-        </header>
-
-        
-
+     
         <div class="content">
            <div class="cover">
                 <img src="../materials/cover (2).jpg" id="cover"> 
@@ -27,12 +38,16 @@
            </div>
 
            <div class="navigation">
+                <a href="../main/main.html">Главная</a>
                 <a href="../music/music.html" class="nav-button">Музыка</a>
                 <a href="../games/games.html" class="nav-button">Игры</a>
                 <a href="../series/series.html" class="nav-button">Сериалы</a>
                 <a href="https://shattereddisk.github.io/rickroll/rickroll.mp4" class="nav-button">Контакты</a>
            </div>
         </div>
+        <audio id="backgroundMusic" loop>
+          <source src="../materials/Nujabes_-_Letter_from_Yokosuka_(mp3.pm).mp3" type="audio/mpeg">
+          </audio>
 
     </div>
 </body>

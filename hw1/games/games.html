@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
     <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="../googoogaga.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('backgroundMusic');
+
+            const playPromise = audio.play();
+
+            const startPlayback = function() {
+                audio.play()
+            };
+
+            document.addEventListener('click', startPlayback);
+            });
+    </script>
 </head>
 <body>
     <div class="container">
+        <header>
+            <a href="../main/main.html">Главная</a>
+            <a href="../music/music.html" class="nav-button">Музыка</a>
+            <a href="../games/games.html" class="nav-button">Игры</a>
+            <a href="../series/series.html" class="nav-button">Сериалы</a>
+            <a href="https://shattereddisk.github.io/rickroll/rickroll.mp4" class="nav-button">Контакты</a>
+
+        </header>
         <h1>Welcome to the games page!</h1>
         <p id="l">Тут я кратко написал про игры в которые я люблю играть больше всего! Впринципе только в них и играю...</p>
             
@@ -19,9 +41,12 @@
             <h2>Достойные упоминания:</h2>
             <ul>
                 <li>ULTRAKILL</li>
-                <li>Minecraft</li>
+                <u>Minecraft</u>
+                <s>Dota2</s>
+                <strong>DRG</strong>
                 <li>Night Runners</li>
-                <li>Lethal Company</li>
+                <sub>Lethal Company</sub>   
+                <!-- новый тег -->
             </ul>
         </div>
         <p class="games"></p>
@@ -43,7 +68,7 @@
         <div class="game">
             <img src="../materials/photo_2025-09-18_22-55-26.jpg">
             <p id="bf5">BATTLEFIELD V</p>
-            <p>В эту игра начал играть недавно. Хотя знал о ней довольно долгое время.
+            <p>В эту игру начал играть недавно. Хотя знал о ней довольно долгое время.
                 четсно говоря не думал что мне она так сильно понравится. Но с первых секунд гейплея
                 я понял что это именно то, чего я хотел и о чем я даже не подозревал. 
                 Мне не передать этих ощущений когда бежишь по полю боя, вокруг взрывы, самолеты, техника,
@@ -57,6 +82,9 @@
             <p>Ну тут и говорить нечего, лучшая стратегия</p>
             <p>Кстати, если захочешь поиграть - пиши, мы как раз игроков набираем. (ключ к игре можно купить за 300 рублей)</p>
         </div>
+        <audio id="backgroundMusic" loop>
+            <source src="../materials/l4d2.mp3" type="audio/mpeg">
+        </audio>
     </div>
 
 </body>

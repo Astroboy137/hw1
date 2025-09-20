@@ -5,7 +5,7 @@ body{
 .container{
     margin-top: 100px;
     width: 56vw;
-    height: 210vh;
+
     background-color: #1c1c1c;
     margin-left: 22vw;
     border-radius: 10px;
@@ -16,7 +16,7 @@ body{
 #blood-stain{
     position: absolute;
 
-    margin-left: 440px;
+    margin-left: 35vw;
     margin-top: 0px;
     width: 400px;
     height: 300px;
@@ -28,7 +28,7 @@ body{
     src: url(../materials/bloody-font.ttf);
 }
 
-/* кто прочитал - тот лох)) */
+
 #name{
     font-size: 78px;
     color:rgb(151, 1, 1);
@@ -67,7 +67,7 @@ body{
     width: 400px;
     height: 230px;
     top: 370px;
-    left: 700px;
+    margin-left: 30vw;
     color: white;
     font-size: 16px;
     border: black solid 2px;
@@ -87,6 +87,7 @@ body{
     position: absolute;
     width: 200px;
     height: 200px;
+
 }
 .name{
 
@@ -99,4 +100,9 @@ body{
     color: white;
     font-size: 16px;
     margin-left: 230px;
+}
+
+.elem{
+
+    padding-top: 3vh;
 }
